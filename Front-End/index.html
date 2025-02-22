@@ -14,8 +14,7 @@
       <ul>
         <li><a href="#hero">Home</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#voice-assistant">Voice Assistant</a></li>
-        <li><a href="#product-scanning">Product Scanning</a></li>
+        <li><a href="#chatbot">Chatbot</a></li>
       </ul>
     </nav>
   </header>
@@ -25,9 +24,16 @@
     <h1>Your Health & Wellness Companion</h1>
     <p>Get personalized workout plans, meal recommendations, and mental wellness support from our AI-powered chatbot.</p>
     <div class="hero-buttons">
-      <button class="btn-primary" onclick="document.querySelector('#features').scrollIntoView({behavior: 'smooth'})">Explore Features</button>
-      <button class="btn-secondary" onclick="document.querySelector('#voice-assistant').scrollIntoView({behavior: 'smooth'})">Voice Assistant</button>
-      <button class="btn-secondary" onclick="document.querySelector('#product-scanning').scrollIntoView({behavior: 'smooth'})">Product Scanning</button>
+      <!-- Scroll to Features -->
+      <button class="btn-primary"
+        onclick="document.querySelector('#features').scrollIntoView({ behavior: 'smooth' })">
+        Explore Features
+      </button>
+      <!-- Scroll to Chatbot -->
+      <button class="btn-secondary"
+        onclick="document.querySelector('#chatbot').scrollIntoView({ behavior: 'smooth' })">
+        Chatbot
+      </button>
     </div>
   </section>
 
@@ -35,45 +41,77 @@
   <section id="features">
     <h2>Our Key Features</h2>
     <div class="features-container">
+      <!-- Feature 1 -->
       <div class="feature-box">
+        <img src="Fitness.jpg" alt="Fitness Feature" class="feature-image" />
         <h3>Fitness Goals & Workout Planning</h3>
         <p>Customized routines for weight loss, muscle gain, or general fitness.</p>
       </div>
+      <!-- Feature 2 -->
       <div class="feature-box">
+        <img src="Meal.jpg" alt="Meal Plans" class="feature-image" />
         <h3>Personalized Meal Plans</h3>
         <p>Tailored nutrition advice and recipes based on dietary preferences.</p>
       </div>
+      <!-- Feature 3 -->
       <div class="feature-box">
+        <img src="Wellness.jpg" alt="Mental Wellness" class="feature-image" />
         <h3>Mental Wellness & Relaxation</h3>
         <p>Guided meditation and stress management techniques to keep you centered.</p>
       </div>
+      <!-- Feature 4 -->
       <div class="feature-box">
+        <img src="Progress.jpg" alt="Progress Tracking" class="feature-image" />
         <h3>Progress Tracking</h3>
         <p>Log your workouts, meals, and mood changes in one place.</p>
       </div>
+      <!-- Feature 5 -->
       <div class="feature-box">
+        <img src="Management.jpg" alt="Management Tasks" class="feature-image" />
         <h3>Management Tasks</h3>
         <p>Schedule appointments and navigate insurance options with ease.</p>
       </div>
+      <!-- Feature 6 -->
       <div class="feature-box">
+        <img src="ChatSupport.jpg" alt="Chat Support" class="feature-image" />
         <h3>24/7 Chat Support</h3>
         <p>Get immediate answers to your health and fitness questions any time.</p>
       </div>
     </div>
   </section>
 
-  <!-- VOICE ASSISTANT SECTION -->
-  <section id="voice-assistant">
-    <h2>Voice Assistant</h2>
-    <p>Interact with our chatbot using voice commands for a hands-free experience.</p>
-    <button onclick="alert('Voice Assistant Feature Coming Soon!')">Enable Voice Assistant</button>
-  </section>
+  <!-- CHATBOT SECTION -->
+  <section id="chatbot">
+    <h2>Try Our AI Chatbot</h2>
+    <div class="chatbot-container">
+      <!-- Chat Input Area -->
+      <div class="chat-input-wrapper">
+        <input 
+          type="text" 
+          placeholder="Describe your food, or send a picture of the food..."
+          class="chat-input"
+        >
+        <!-- Icons for Product Scanning, Voice Assistant, Send -->
+        <div class="chat-icons">
+          <button class="icon-btn" title="Product Scanning">
+            <span class="camera-icon">📷</span>
+          </button>
+          <button class="icon-btn" title="Voice Assistant">
+            <span class="mic-icon">🎤</span>
+          </button>
+          <button class="icon-btn" title="Send Message">
+            <span class="send-icon">➤</span>
+          </button>
+        </div>
+      </div>
 
-  <!-- PRODUCT SCANNING SECTION -->
-  <section id="product-scanning">
-    <h2>Product Scanning</h2>
-    <p>Scan any food product to instantly get detailed nutritional information and calorie counts.</p>
-    <button onclick="alert('Product Scanning Feature Coming Soon!')">Scan a Product</button>
+      <!-- Quick Action Buttons -->
+      <div class="chat-suggestions">
+        <button>Take a picture to identify calories</button>
+        <button>Create a weight loss plan</button>
+        <button>Calories Calculator</button>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -83,6 +121,7 @@
 
   <!-- Smooth Button Click Animation Script -->
   <script>
+    // Simple "click" animation on any button
     document.querySelectorAll('button').forEach(button => {
       button.addEventListener('click', function() {
         this.classList.add('clicked');
