@@ -81,7 +81,6 @@ header .logo {
   margin: 0 auto;
 }
 
-/* Force heading onto one line */
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -116,7 +115,7 @@ header .logo {
 ================================ */
 #features {
   padding: 3rem 2rem;
-  background-color: #000; /* pure black background */
+  background-color: #000;  /* Pure black background */
   text-align: center;
 }
 
@@ -125,10 +124,17 @@ header .logo {
   margin-bottom: 2rem;
 }
 
-/* 
-   Display features in a row,
-   wrap if screen is narrow
-*/
+/* Remove underline from clickable feature links */
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-link:hover {
+  text-decoration: none;
+}
+
+/* Features Container: grid layout with wrapping */
 .features-container {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +144,7 @@ header .logo {
   margin: 0 auto;
 }
 
-/* Each Feature Box */
+/* Each Feature Box (same size for all) */
 .feature-box {
   background-color: #1a1a1a;
   width: 250px;
@@ -148,13 +154,11 @@ header .logo {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover: translate + green glow box shadow */
 .feature-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px var(--green-accent);
 }
 
-/* Feature Image */
 .feature-image {
   width: 100%;
   height: 150px;
@@ -162,7 +166,6 @@ header .logo {
   margin-bottom: 1rem;
 }
 
-/* Title & Description */
 .feature-box h3 {
   font-size: 1.1rem;
   margin: 0.8rem 1rem 0.4rem 1rem;
@@ -176,7 +179,6 @@ header .logo {
   color: var(--white);
 }
 
-/* Bottom Accent Bar (Green) */
 .bottom-accent {
   position: absolute;
   bottom: 0;
@@ -187,7 +189,6 @@ header .logo {
   transition: box-shadow 0.3s;
 }
 
-/* Glow effect for accent bar (optional) */
 .feature-box:hover .bottom-accent {
   box-shadow: 0 0 10px var(--green-accent);
 }
@@ -255,6 +256,138 @@ footer p {
 }
 
 /* ================================
+   FITNESS PAGE (fitness.html)
+================================ */
+#fitness-page {
+  padding: 3rem 2rem;
+  background-color: #000; /* pure black background */
+  text-align: center;
+}
+
+#fitness-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Subheading under the main h1 */
+.fitness-subheading {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+/* Category blocks (Back, Biceps, etc.) */
+.category {
+  margin-bottom: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--green-accent);
+}
+
+/* Row of GIF boxes */
+.gif-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Each GIF box */
+.gif-box {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.gif-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--green-accent);
+}
+
+.gif-box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.gif-box p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--white);
+}
+
+/* ================================
+   MEAL PAGE (meal.html)
+================================ */
+#details {
+  padding: 3rem 2rem;
+  background-color: #000;
+  text-align: center;
+}
+
+#details h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-box {
+  background-color: #1a1a1a;
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.detail-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--green-accent);
+}
+
+detail-box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+detail-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--green-accent);
+}
+
+detail-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+/* ================================
    BUTTON CLICK ANIMATION
 ================================ */
 button.clicked {
@@ -274,11 +407,9 @@ button.clicked {
   #hero h1 {
     font-size: 2.5rem;
   }
-
   #features h2 {
     font-size: 1.6rem;
   }
-
   .feature-box {
     width: 100%;
     max-width: 300px;

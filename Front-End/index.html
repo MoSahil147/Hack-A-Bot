@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>WellnessAI - Your Health & Wellness Companion</title>
-  <!-- Link to External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +10,6 @@
   <header>
     <div class="logo">WellnessAI</div>
     <div class="auth-buttons">
-      <!-- Separate Sign In, Sign Up, Contact Us -->
       <button class="auth-btn sign-in-btn">Sign In</button>
       <button class="auth-btn sign-up-btn">Sign Up</button>
       <button class="auth-btn contact-btn" id="contactBtn">Contact Us</button>
@@ -29,34 +27,38 @@
     </div>
   </section>
 
-  <!-- FEATURES SECTION (Green Glow on Hover) -->
+  <!-- FEATURES SECTION -->
   <section id="features">
     <h2>Our Key Features</h2>
     <div class="features-container">
-      <!-- Feature 1 -->
+      <!-- Feature 1: Fitness Goals & Workout Planning (clickable, no underline) -->
+      <a href="fitness.html" class="feature-link">
+        <div class="feature-box">
+          <img src="Fitness.jpg" alt="Fitness Feature" class="feature-image">
+          <h3>Fitness Goals &amp; Workout Planning</h3>
+          <p>Customized routines for weight loss, muscle gain, or general fitness.</p>
+          <div class="bottom-accent"></div>
+        </div>
+      </a>
+      <!-- Feature 2: Personalized Meal Plans (clickable, same size as others) -->
+      <a href="meal.html" class="feature-link">
+        <div class="feature-box">
+          <img src="Meal.jpg" alt="Meal Plans" class="feature-image">
+          <h3>Personalized Meal Plans</h3>
+          <p>Tailored nutrition advice and recipes based on dietary preferences.</p>
+          <div class="bottom-accent"></div>
+        </div>
+      </a>
+      <!-- Feature 3 (Static) -->
       <div class="feature-box">
-        <img src="Fitness.jpg" alt="Fitness Feature" class="feature-image" />
-        <h3>Fitness Goals & Workout Planning</h3>
-        <p>Customized routines for weight loss, muscle gain, or general fitness.</p>
-        <div class="bottom-accent"></div>
-      </div>
-      <!-- Feature 2 -->
-      <div class="feature-box">
-        <img src="Meal.jpg" alt="Meal Plans" class="feature-image" />
-        <h3>Personalized Meal Plans</h3>
-        <p>Tailored nutrition advice and recipes based on dietary preferences.</p>
-        <div class="bottom-accent"></div>
-      </div>
-      <!-- Feature 3 -->
-      <div class="feature-box">
-        <img src="Wellness.jpg" alt="Mental Wellness" class="feature-image" />
-        <h3>Mental Wellness & Relaxation</h3>
+        <img src="Wellness.jpg" alt="Mental Wellness" class="feature-image">
+        <h3>Mental Wellness &amp; Relaxation</h3>
         <p>Guided meditation and stress management techniques to keep you centered.</p>
         <div class="bottom-accent"></div>
       </div>
-      <!-- Feature 4 -->
+      <!-- Feature 4 (Static) -->
       <div class="feature-box">
-        <img src="Progress.jpg" alt="Progress Tracking" class="feature-image" />
+        <img src="Progress.jpg" alt="Progress Tracking" class="feature-image">
         <h3>Progress Tracking</h3>
         <p>Log your workouts, meals, and mood changes in one place.</p>
         <div class="bottom-accent"></div>
@@ -67,7 +69,7 @@
   <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to email us at <a href="mailto:support@wellnessai.com">support@wellnessai.com</a>.</p>
+    <p>If you have any questions, please email us at <a href="mailto:support@wellnessai.com">support@wellnessai.com</a>.</p>
   </section>
 
   <!-- FOOTER -->
@@ -81,7 +83,6 @@
     Chat 💬
   </div>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

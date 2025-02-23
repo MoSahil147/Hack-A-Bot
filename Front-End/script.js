@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
       getStartedBtn.addEventListener("click", () => {
         const featuresSection = document.getElementById("features");
         if (featuresSection) {
+          // Smooth scroll
           featuresSection.scrollIntoView({ behavior: "smooth" });
         }
       });
     }
   
-    // Smooth scroll from "Contact Us" button to the Contact section
+    // Smooth scroll from "Contact Us" button to the Contact section (if it exists)
     const contactBtn = document.getElementById("contactBtn");
     if (contactBtn) {
       contactBtn.addEventListener("click", () => {
