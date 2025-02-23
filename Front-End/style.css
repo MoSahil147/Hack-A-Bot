@@ -8,21 +8,31 @@
   --font-family: "Arial", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-family);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* 
+  Fade-in/out transitions for the entire page
+  By default, body has opacity: 0
+  When 'loaded' class is added, body fades to opacity: 1
+*/
 body {
+  opacity: 0;
+  transition: opacity 0.6s ease; /* Smoother transitions */
   background-color: var(--bg-dark);
   color: var(--white);
   line-height: 1.6;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+body.loaded {
+  opacity: 1; /* Fade in the page */
+}
+
+html {
+  scroll-behavior: smooth; /* Smoother anchor scrolling */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* ================================
@@ -66,34 +76,50 @@ header .logo {
    HERO SECTION (Full Screen)
 ================================ */
 #hero {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+#hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  min-height: 100vh;
   text-align: center;
   padding: 2rem;
+  background: rgba(0,0,0,0.4); /* Dark overlay for text readability */
 }
 
-.hero-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#hero h1 {
+.hero-overlay h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
-  white-space: nowrap; /* Keep heading on one line */
+  color: var(--white);
+  white-space: nowrap;
 }
 
-#hero p {
+.hero-overlay p {
   font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 2rem;
+  color: var(--white);
 }
 
-.btn-primary {
+.hero-overlay .btn-primary {
   background-color: var(--green-accent);
   color: #000;
   padding: 0.8rem 1.5rem;
@@ -104,7 +130,7 @@ header .logo {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-primary:hover {
+.hero-overlay .btn-primary:hover {
   background-color: #00c2aa;
   transform: scale(1.05);
 }
@@ -114,7 +140,7 @@ header .logo {
 ================================ */
 #features {
   padding: 3rem 2rem;
-  background-color: #000;  /* Pure black background */
+  background-color: #000;
   text-align: center;
 }
 
@@ -123,7 +149,7 @@ header .logo {
   margin-bottom: 2rem;
 }
 
-/* Remove underline for clickable feature links */
+/* No underline for clickable links */
 .feature-link {
   text-decoration: none;
   color: inherit;
@@ -133,7 +159,6 @@ header .logo {
   text-decoration: none;
 }
 
-/* Features Container: grid layout with wrapping */
 .features-container {
   display: flex;
   flex-wrap: wrap;
@@ -143,11 +168,11 @@ header .logo {
   margin: 0 auto;
 }
 
-/* Each Feature Box (all same width & min-height for uniform size) */
+/* All feature boxes same size */
 .feature-box {
   background-color: #1a1a1a;
   width: 250px;
-  min-height: 340px; /* Ensures consistent height across all boxes */
+  min-height: 340px; /* consistent height */
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -156,7 +181,6 @@ header .logo {
 
 .feature-box:hover {
   transform: translateY(-5px);
-  /* Green glow on all sides */
   box-shadow: 0 0 20px var(--green-accent);
 }
 
@@ -180,6 +204,7 @@ header .logo {
   color: var(--white);
 }
 
+/* Teal accent bar */
 .bottom-accent {
   position: absolute;
   bottom: 0;
@@ -234,34 +259,11 @@ footer p {
 }
 
 /* ================================
-   FLOATING CHAT BUTTON
-================================ */
-.chat-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--green-accent);
-  color: #000;
-  border-radius: 50px;
-  padding: 0.8rem 1.2rem;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: background-color 0.3s, transform 0.2s;
-  z-index: 9999;
-}
-
-.chat-btn:hover {
-  background-color: #00c2aa;
-  transform: scale(1.05);
-}
-
-/* ================================
    FITNESS PAGE (fitness.html)
 ================================ */
 #fitness-page {
   padding: 3rem 2rem;
-  background-color: #000; /* pure black background */
+  background-color: #000;
   text-align: center;
 }
 
@@ -269,22 +271,18 @@ footer p {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--white);
-  text-align: center;
 }
 
-/* Subheading under the main h1 (Fitness page) */
 .fitness-subheading {
   font-size: 1.2rem;
   color: #bbb;
   margin-bottom: 2rem;
 }
 
-/* Category blocks (Back, Biceps, Chest, etc.) */
 .category {
   margin-bottom: 3rem;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -294,7 +292,6 @@ footer p {
   color: var(--green-accent);
 }
 
-/* Row for GIF boxes (2 or more per row) */
 .gif-row {
   display: flex;
   gap: 1rem;
@@ -302,7 +299,6 @@ footer p {
   flex-wrap: wrap;
 }
 
-/* Individual GIF box */
 .gif-box {
   background-color: #1a1a1a;
   border-radius: 8px;
@@ -336,7 +332,7 @@ footer p {
 ================================ */
 #meal-page {
   padding: 3rem 2rem;
-  background-color: #000; /* pure black background */
+  background-color: #000;
   text-align: center;
 }
 
@@ -344,22 +340,18 @@ footer p {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--white);
-  text-align: center;
 }
 
-/* Subheading under the main h1 (Meal page) */
 .meal-subheading {
   font-size: 1.2rem;
   color: #bbb;
   margin-bottom: 2rem;
 }
 
-/* Meal categories (Carbs, Proteins, Fats, etc.) */
 .meal-category {
   margin-bottom: 3rem;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -369,7 +361,6 @@ footer p {
   color: var(--green-accent);
 }
 
-/* Row for meal images */
 .meal-row {
   display: flex;
   gap: 1rem;
@@ -377,7 +368,6 @@ footer p {
   flex-wrap: wrap;
 }
 
-/* Individual meal box */
 .meal-box {
   background-color: #1a1a1a;
   border-radius: 8px;
@@ -423,19 +413,22 @@ button.clicked {
    RESPONSIVE DESIGN
 ================================ */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 2.5rem;
+  /* Smaller hero text, etc. */
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  .hero-overlay p {
+    font-size: 1.1rem;
   }
 
   #features h2 {
     font-size: 1.6rem;
   }
 
-  /* Feature boxes adapt on small screens */
   .feature-box {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    min-height: auto; /* Optional: remove min-height if it doesn't look good on mobile */
+    min-height: auto; /* remove forced min-height on mobile if you want */
   }
 }

@@ -16,10 +16,15 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Full Screen) -->
+  <!-- HERO SECTION with Background Video -->
   <section id="hero">
-    <div class="hero-content">
-      <h1>Your Health & Wellness Companion</h1>
+    <video id="hero-video" autoplay muted loop playsinline>
+      <source src="Main.mp4" type="video/mp4">
+      <!-- Fallback text if video not supported -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1>Your Health &amp; Wellness Companion</h1>
       <p>
         Get personalized workout plans, meal recommendations, and mental wellness support from our AI-powered chatbot.
       </p>
@@ -31,7 +36,7 @@
   <section id="features">
     <h2>Our Key Features</h2>
     <div class="features-container">
-      <!-- Feature 1: Fitness Goals & Workout Planning (clickable, no underline) -->
+      <!-- Feature 1: Fitness Goals & Workout Planning -->
       <a href="fitness.html" class="feature-link">
         <div class="feature-box">
           <img src="Fitness.jpg" alt="Fitness Feature" class="feature-image">
@@ -40,7 +45,7 @@
           <div class="bottom-accent"></div>
         </div>
       </a>
-      <!-- Feature 2: Personalized Meal Plans (clickable, same size as others) -->
+      <!-- Feature 2: Personalized Meal Plans -->
       <a href="meal.html" class="feature-link">
         <div class="feature-box">
           <img src="Meal.jpg" alt="Meal Plans" class="feature-image">
@@ -78,11 +83,7 @@
     <p>Contact: support@wellnessai.com</p>
   </footer>
 
-  <!-- FLOATING CHAT BUTTON -->
-  <div id="chat-floating" class="chat-btn" title="Chat with us">
-    Chat 💬
-  </div>
-
+  <!-- No floating chat icon here -->
   <script src="script.js"></script>
 </body>
 </html>
