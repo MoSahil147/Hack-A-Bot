@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL & COLOR SCHEME
-================================ */
+/* GLOBAL & COLOR SCHEME */
 :root {
   --bg-dark: #0B0B0B;
   --green-accent: #00e0c7;
@@ -32,9 +30,7 @@ body.loaded {
   opacity: 1;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -69,9 +65,7 @@ header .logo {
   transform: scale(1.05);
 }
 
-/* ================================
-   HERO SECTION (Full Screen with Background Video)
-================================ */
+/* HERO SECTION (Full Screen with Background Video) */
 #hero {
   position: relative;
   min-height: 100vh;
@@ -133,9 +127,7 @@ header .logo {
   transform: scale(1.05);
 }
 
-/* ================================
-   FEATURES SECTION
-================================ */
+/* FEATURES SECTION */
 #features {
   padding: 3rem 2rem;
   background-color: #000;
@@ -215,9 +207,7 @@ header .logo {
   box-shadow: 0 0 10px var(--green-accent);
 }
 
-/* ================================
-   ABOUT SECTION
-================================ */
+/* ABOUT SECTION */
 .about {
   display: flex;
   align-items: center;
@@ -273,9 +263,7 @@ header .logo {
   transform: scale(1.05);
 }
 
-/* ================================
-   OUR PLANS SECTION
-================================ */
+/* OUR PLANS SECTION */
 .plans {
   padding: 3rem 2rem;
   background-color: #000;
@@ -358,9 +346,7 @@ header .logo {
   transform: scale(1.05);
 }
 
-/* ================================
-   CONTACT SECTION
-================================ */
+/* CONTACT SECTION */
 #contact {
   padding: 2rem;
   text-align: center;
@@ -382,9 +368,7 @@ header .logo {
   text-decoration: none;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 footer {
   background-color: #000;
   text-align: center;
@@ -397,9 +381,7 @@ footer p {
   margin: 0.2rem 0;
 }
 
-/* ================================
-   BUTTON CLICK ANIMATION
-================================ */
+/* BUTTON CLICK ANIMATION */
 button.clicked {
   animation: clickAnimation 0.3s;
 }
@@ -410,9 +392,7 @@ button.clicked {
   100% { transform: scale(1); }
 }
 
-/* ================================
-   FITNESS PAGE (fitness.html)
-================================ */
+/* FITNESS PAGE (fitness.html)*/
 #fitness-page {
   padding: 3rem 2rem;
   background-color: #000;
@@ -480,9 +460,7 @@ button.clicked {
   color: var(--white);
 }
 
-/* ================================
-   MEAL PAGE (meal.html)
-================================ */
+/* MEAL PAGE (meal.html) */
 #meal-page {
   padding: 3rem 2rem;
   background-color: #000;
@@ -550,9 +528,7 @@ button.clicked {
   color: var(--white);
 }
 
-/* ================================
-   WELLNESS PAGE (wellness.html)
-================================ */
+/* WELLNESS PAGE (wellness.html) */
 #wellness-page {
   padding: 3rem 2rem;
   background-color: #000;
@@ -588,9 +564,7 @@ button.clicked {
   color: var(--white);
 }
 
-/* ================================
-   BUTTON CLICK ANIMATION
-================================ */
+/* BUTTON CLICK ANIMATION */
 button.clicked {
   animation: clickAnimation 0.3s;
 }
@@ -601,9 +575,7 @@ button.clicked {
   100% { transform: scale(1); }
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .hero-overlay h1 {
     font-size: 2.2rem;
