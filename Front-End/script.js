@@ -77,23 +77,63 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Voiceflow Chatbot Integration (if needed)
+  // (function(d, t) {
+  //   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  //   v.onload = function() {
+  //     window.voiceflow.chat.load({
+  //       verify: { projectID: '67baba45c97c50a0c1d175eb' },
+  //       url: 'https://general-runtime.voiceflow.com',
+  //       versionID: 'production',
+  //       voice: { 
+  //         url: "https://runtime-api.voiceflow.com" 
+  //       },
+  //       theme: {
+  //         launcherTitle: 'Chat'
+  //       }
+  //     });
+  //   };
+  //   v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+  //   v.type = "text/javascript"; 
+  //   s.parentNode.insertBefore(v, s);
+  // })(document, 'script');
+
+
+//   // <script type="text/javascript">
+//   (function(d, t) {
+//       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+//       v.onload = function() {
+//         window.voiceflow.chat.load({
+//           verify: { projectID: '67baba45c97c50a0c1d175eb' },
+//           url: 'https://general-runtime.voiceflow.com',
+//           versionID: 'production', 
+//           voice: { 
+//             url: "https://runtime-api.voiceflow.com" 
+//           }
+//         });
+//       }
+//       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+//   })(document, 'script');
+// // </script>
+
+// <script type="text/javascript">
   (function(d, t) {
-    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    v.onload = function() {
-      window.voiceflow.chat.load({
-        verify: { projectID: '67baba45c97c50a0c1d175eb' },
-        url: 'https://general-runtime.voiceflow.com',
-        versionID: 'production',
-        voice: { 
-          url: "https://runtime-api.voiceflow.com" 
-        },
-        theme: {
-          launcherTitle: 'Chat'
-        }
-      });
-    };
-    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-    v.type = "text/javascript"; 
-    s.parentNode.insertBefore(v, s);
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '67baba45c97c50a0c1d175eb' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production', 
+          voice: { 
+            url: "https://runtime-api.voiceflow.com" 
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
+// </script>
+
+
+
+
 });
+
