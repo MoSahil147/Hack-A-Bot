@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const href = link.getAttribute('href');
+      // Start fade out
       document.body.classList.remove('loaded');
+      // After 0.6s (matching the CSS transition), navigate
       setTimeout(() => {
         window.location.href = href;
       }, 600);
@@ -55,6 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Free Class Booking feature coming soon!");
     });
   }
+
+  // Prevent redirection for all "Join Now" plan buttons
+  document.querySelectorAll(".btn-plan").forEach((planButton) => {
+    planButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert("Plan subscription coming soon!");
+    });
+  });
 
   // Button click animation
   document.querySelectorAll("button").forEach((button) => {
