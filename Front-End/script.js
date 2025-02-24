@@ -47,6 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Prevent redirection for "Book a Free Class" button
+  const bookClassBtn = document.querySelector(".about-btn");
+  if (bookClassBtn) {
+    bookClassBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert("Free Class Booking feature coming soon!");
+    });
+  }
+
   // Button click animation
   document.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", function () {
